@@ -19,11 +19,11 @@ variable "availability_zone" {
 }
 
 variable "public_subnet" {
-    default = "10.0.0.0/16"
+    default = "10.0.0.0/24"
 }
 
 variable "private_subnet" {
-    default = "10.0.1.0/16"
+    default = "10.0.1.0/24"
 }
 
 variable "bastion_ssh" {

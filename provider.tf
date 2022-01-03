@@ -1,5 +1,19 @@
-﻿provider "tencentcloud" {
-  secret_id  = "my-secret-id"
-  secret_key = "my-secret-key"
-  region     = "ap-guangzhou"
+﻿# provider "tencentcloud" {
+#   secret_id  = "xx"
+#   secret_key = "xx"
+#   region     = "xx"
+# }
+
+provider "tencentcloud" {
+}
+
+terraform {
+  required_version = ">= 0.13"
+
+  required_providers {
+   tencentcloud = {
+        source = "tencentcloudstack/tencentcloud"
+        version = "~> 1.60.18"
+    }
+  }
 }
