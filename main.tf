@@ -54,7 +54,7 @@ data "tencentcloud_images" "default" {
 # Create a bastion vm
 resource "tencentcloud_instance" "bastion" {
   instance_name              = "bastion"
-  availability_zone          = var.availability_zone
+  availability_zone          = "ap-guangzhou-3"
   image_id                   = data.tencentcloud_images.default.images.0.image_id
   instance_type              = data.tencentcloud_instance_types.default.instance_types.0.instance_type
   system_disk_type           = "CLOUD_PREMIUM"
